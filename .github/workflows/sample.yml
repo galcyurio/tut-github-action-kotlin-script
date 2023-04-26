@@ -1,0 +1,12 @@
+name: Run Sample kotlin script
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-sample-kotlin-script:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Run Sample
+      run: kotlinc -script ./sample.kts
